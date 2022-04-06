@@ -5,13 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+
+    <style>
+
+        body{
+            font-family: arial 1em ;
+            background-image: linear-gradient(90deg, rgb(241, 241, 247), rgb(198, 206, 198));
+
+            
+        }
+
+        h1{
+
+            font-size: 3em;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.363);
+            color: rgb(10, 68, 49);
+        }
+
+        p {
+
+            font-size: 1.2em;
+            text-align: center;
+            text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.356);
+        }
+
+        input{
+
+            background-color: rgba(253, 252, 250, 0.507);
+            font-weight: bold;
+        }
+
+        div{
+
+            font-size: 1.3em;
+            text-align: center;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border: 5px;
+            padding: 20px;
+            
+            
+        }
+
+        #botao{
+
+            border-radius: 5px;
+            background-color: rgb(240, 245, 243);
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+            
+        }
+
+        input#botão:hover{
+
+            background-color: aqua;
+        }
+
+
+
+    </style>
 </head>
 <body>
     <h1>Sua nacionalidade</h1>
 
-    Digite o país que você nasceu <input type="text" name="pais" id="pais">
+    <p>Digite o país em que você nasceu <input type="text" name="pais" id="pais">
 
-    <input type="button" value="Pesquisar" onclick="clicar()">
+    <input type="button" value="Pesquisar" onclick="clicar()" id="botao"></p>
 
     <div id="res">
 
@@ -19,20 +82,29 @@
     </div>
 
     <script>
+
+           
+
         function clicar() {
 
-            var paisp = document.getElementById('pais').value.toLocaleLowerCase()
+            var nac = document.getElementById('pais').value.toLocaleLowerCase()
             var resu = document.getElementById('res')
           
 
-            resu.innerHTML = `<p>Seu país é ${paisp}</p>`
+        resu.innerHTML += `<p>Seu país é <strong>${nac}</strong></p><br>`
+
+        if ( nac == 'brasil'){ resu.innerHTML += '<strong>Você é brasileiro</strong>'}
+
+        else { resu.innerHTML += '<strong>Você é estrangeiro</strong>'
+
+        
+            
 
 
-            if (paisp == 'Brasil') {res.innerText ='Você é Brasileiro'
-            }
-
-            else {(res.innerText = 'Você é estrangeiro')
         }
+
+
+        
 
         }
 
