@@ -3,7 +3,7 @@
 
 body{
 
-background-color: rgb(128, 167, 226);
+background-color: rgb(111, 154, 219);
 font-family: Arial, Helvetica, sans-serif;
 font-size: 1em;
 
@@ -20,6 +20,18 @@ text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
 
 }
 
+
+div{
+
+    text-align: center;
+    padding: 8px;
+}
+
+p {
+    font-size: 1.4em;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
+}
 
 section{
 
@@ -38,5 +50,6 @@ footer{
 color: white;
 font-style: italic;
 text-align: center;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
 
 }
