@@ -1,0 +1,30 @@
+
+        h1 {
+            font: normal 35pt Arial;
+            color: rgb(19, 18, 18);
+        }
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(240, 147, 131);
+        }
+        input {
+            font: normal 18pt Arial;
+            width:  100px;
+            color: rgb(19, 18, 18);
+            background-color: rgb(255, 254, 254);
+        }
+
+    
+        div {
+            font: normal 20pt Arial;
+            color:rgb(255, 255, 255);
+
+            
+        }
+
+        #res{
+
+            padding: 20px;
+            padding-left: 0px;
+
+        }

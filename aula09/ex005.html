@@ -8,7 +8,7 @@
 
     <style>
         body { 
-            background:rgb(183, 198, 199);
+            background:rgb(242, 246, 247);
             color: black;
             font: normal 18pt arial;
         }
@@ -28,10 +28,13 @@
     
     <script>
         var corpo = document.body
+
         var p1 = document.getElementsByTagName('p')[1]
-        
+        document.write('Está escrito assim ' + p1.innerText) 
+        p1.style.color = 'gray'
+
         var d = document.querySelector('div#msg')
-        d.style.color = 'red'
+        d.style.color = 'blue'
 
 
     </script>
