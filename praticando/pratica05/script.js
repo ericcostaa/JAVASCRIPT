@@ -6,13 +6,23 @@ function calcular (){
       var resul = (nota1 + nota2) / 2
       var media = 5
 
-      var res = document.querySelector('#res')
-    
 
+      var res = document.querySelector('#res')
      
     
-    res.innerHTML = `Calculando a média final de ${nome} ` 
-    p1.innerHTML = `As notas obtidas foram ${nota1} e ${nota2}`    
+    
+    p0.innerHTML = `Calculando a media final de <strong>${nome}</strong>`
+    p1.innerHTML =`As notas obtidas foram <strong>${nota1}</strong> e <strong>${nota2}</strong>`
+    p2.innerHTML = `A média final será <strong>${resul}</strong>`
 
+    if ( resul < media) {
+      p3.innerHTML = 'A mensagem que temos é: <strong style= "color: red;"> Estude um, pouco mais!</strong>'
+    }
+
+    else {
+      p3.innerHTML = 'A mensagem que temos é: <strong style = "color:green;"> Meus parabéns!</strong>'
+    }
+
+    
         
 }
