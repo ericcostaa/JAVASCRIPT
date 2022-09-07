@@ -8,6 +8,10 @@ function verificar(){
     if (fano.value.length == 0 || fano.value > ano) {
         alert("[ERRO] Verifique a data e tente novamente!")
     }
+    
+    else if (fano.value< 1900){
+        alert("[ERRO] Verifique a data e tente novamente!")
+    }
     else {
       var fsex = document.getElementsByName('radsex')
       var idade = ano - Number(fano.value)
@@ -18,11 +22,11 @@ function verificar(){
      if (fsex[0].checked) {
         genero = 'Homem'
 
-        if(idade >= 0 && idade < 12){
+        if(idade >= 0 && idade <= 14){
             //criança
             img.setAttribute('src','foto-bebe-m.png')
 
-        } else if (idade < 23) {       
+        } else if (idade <= 30) {       
             //jovem
             img.setAttribute('src','foto-jovem-m.png')
 
@@ -40,11 +44,11 @@ function verificar(){
     else {
         genero = "Mulher"
 
-        if(idade >= 0 && idade < 12){
+        if(idade >= 0 && idade <= 14){
             //criança
             img.setAttribute('src', 'foto-bebe-f.png')
 
-        } else if (idade <= 23) {       
+        } else if (idade <= 30) {       
             //jovem
             img.setAttribute('src', 'foto-jovem-f.png')
 
