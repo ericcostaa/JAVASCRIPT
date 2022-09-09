@@ -5,12 +5,25 @@ function contar() {
     let pas = document.getElementById('txtp')
     let res = document.getElementById('resu')
 
-    if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0){
+ 
 
-        res.innerHTML = ( 'Impossível contar...')
-        //alert('[ERRO] Faltam dados')
+    if ( ini.value.length == 0 && fim.value.length == 0) {
+        res.innerHTML = ( 'Impossível contar. <strong> PREENCHA AS CAIXAS <strong>')
+    } // Mensagem de erro caso não seja preencihido os 2 primeiros dados
+
+    else if (ini.value.length == 0){
+
         
+        res.innerHTML = ( 'Impossível contar. <strong>PREENCHA A PRIMEIRA CAIXA</strong>')
+       // Mensagem de erro caso não seja preencihido o primeiro dado
     }
+    
+
+    else if ( fim.value.length == 0) {
+        res.innerHTML = ( 'Impossível contar. <strong> PREENCHA A SEGUNDA CAIXA <strong>')
+    } // Mensagem de erro caso não seja preencihido o segundo dado
+    
+        
     else {
 
         res.innerHTML = 'Contando: <br>'
