@@ -24,26 +24,29 @@
 
     <script>
 
-           
+            
 
         function clicar() {
 
             var nac = document.getElementById('pais').value.toLocaleLowerCase()
             var resu = document.getElementById('res')
           
+            
 
         resu.innerHTML += `<p>Seu país é <strong>${nac}</strong></p><br>`
 
+        
         if ( nac == 'brasil'){ resu.innerHTML += '<strong>Você é brasileiro</strong>'}
 
         else { resu.innerHTML += '<strong>Você é estrangeiro</strong>'
 
-        
-            
-
-
+             
         }
-
+        
+       document.getElementById('pais').value=''
+       pais.focus()
+       document.getElementById('res').value= null
+       
 
         
 
