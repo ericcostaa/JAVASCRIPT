@@ -46,16 +46,35 @@ function finalizar() {
 
     else{
         let total = dados.length
+        let maior = dados[0]
+        let menor = dados [0]
 
+        for(let pos in dados){
+            if(dados[pos] > maior)
+               maior = dados[pos]
+           
+
+            if (dados[pos] < menor)
+                menor = dados[pos]
+            }
      
+            let soma = 0
 
+           for (let i = 0; i < dados.length; i++){
+                soma += dados[i]
+            }
+
+            let med = (soma / total)
+
+            
 
         resul.innerHTML = ''
         resul.innerHTML += `<p>A lista contém ${total} números</p>`
-       // resul.innerHTML += ` <p>O maior valor informado foi ${}</p>`
-       // resul.innerHTML += ` <p>O menor valor informado foi ${}</p>`
-        resul.innerHTML += `<p>A soma dos valores é de</p>  `
-        resul.innerHTML += `<p>A média dos valores informados é de</p> ` 
+        resul.innerHTML += ` <p>O maior valor informado foi ${maior}</p>`
+        resul.innerHTML += ` <p>O menor valor informado foi ${menor}</p>`
+
+        resul.innerHTML += `<p>A soma dos valores é de ${soma}</p>  `
+        resul.innerHTML += `<p>A média dos valores informados é de ${med}</p> ` 
     
     } 
 }
